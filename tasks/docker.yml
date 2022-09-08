@@ -3,10 +3,6 @@
 - hosts: all
   become: yes
   gather_facts: yes
-  vars:
-          Docker_version: 5:20.10.17~3-0~debian-buster
-          Docker_ce_cli_version: 5:20.10.17~3-0~debian-buster
-          Containerd_version: 1.6.6-1
 
   tasks:
           - name: Install aptitude
@@ -32,29 +28,29 @@
 
           - name: Add Docker GPG apt key
             apt_key:
-                     url: https://download.docker.com/linux/ubuntu/gpg
+                     url: "{{  apt_gpg_key  }}"
                      state: present
 
           - name: Add Docker repository
             apt_repository:
-                     repo: deb https://download.docker.com/linux/debian buster stable
+                     repo: docker_apt_repository
                      state: present
 
           - name: Update apt and install Docker
             apt:
-                     name: "docker-ce={{ Docker_version }}"
+                     name: "docker-ce={{ docker_version }}"
                      state: present
                      update_cache: true
 
           - name: Install Docker additional components
             apt:
-                    name: "docker-ce-cli={{ Docker_ce_cli_version }}"
+                    name: "docker-ce-cli={{ docker_ce_cli_version }}"
                     state: present
                     update_cache: true
 
           - name: Install Containerd
             apt:
-                    name: "containerd.io={{ Containerd_version }}"
+                    name: "containerd.io={{ containerd_version }}"
                     state: present
                     update_cache: true
 

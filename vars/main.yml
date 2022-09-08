@@ -1,2 +1,10 @@
 ---
 # vars file for ansible-docker
+
+docker_ce_cli_version: 5:20.10.17~3-0~debian-buster
+
+containerd_version: 1.6.6-1
+
+docker_apt_repository: deb https://download.docker.com/linux/debian buster stable 
+
+apt_gpg_key: https://download.docker.com/linux/ubuntu/gpg 
