@@ -26,7 +26,7 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: servers
       become: yes
       vars_file:
-       - vars/mail.yml
+       - vars/main.yml
       roles:
          - { role: ansible-docker }
 ```
