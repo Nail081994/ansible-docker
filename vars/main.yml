@@ -1,10 +1,14 @@
 ---
 # vars file for ansible-docker
 
+# version of docker main packages
 docker_ce_cli_version: 5:20.10.17~3-0~debian-buster
 
+# version of CRI Containerd to be installed
 containerd_version: 1.6.6-1
 
+# docker's url of repository
 docker_apt_repository: deb https://download.docker.com/linux/debian buster stable 
 
+# apt_gpg_key's version to be taken from docker.com
 apt_gpg_key: https://download.docker.com/linux/ubuntu/gpg 
