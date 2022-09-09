@@ -12,10 +12,10 @@ Requirements
 Role Variables
 --------------
 
-- `docker_ce_cli_version`
-- `containerd_version`
-- `docker_apt_repository`
-- `apt_gpg_key`
+- `docker_ce_cli_version` # version of docker main packages
+- `containerd_version` # version of CRI Containerd to be installed
+- `docker_apt_repository` # docker's url of repository
+- `apt_gpg_key` # apt_gpg_key's version to be taken from docker.com
 
 Example Playbook
 ----------------
