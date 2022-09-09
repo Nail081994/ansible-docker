@@ -1,2 +1,5 @@
 ---
 # tasks file for ansible-docker
+
+- name: Install Docker for Debian based distr's
+  include_tasks: docker.yml
