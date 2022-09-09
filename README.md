@@ -12,6 +12,7 @@ Requirements
 Role Variables
 --------------
 
+- `docker_version` # version of docker main packages
 - `docker_ce_cli_version` # version of docker main packages
 - `containerd_version` # version of CRI Containerd to be installed
 - `docker_apt_repository` # docker's url of repository
