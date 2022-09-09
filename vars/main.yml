@@ -2,6 +2,9 @@
 # vars file for ansible-docker
 
 # version of docker main packages
+docker_version: 5:20.10.17~3-0~debian-buster
+
+# version of docker-cli main packages
 docker_ce_cli_version: 5:20.10.17~3-0~debian-buster
 
 # version of CRI Containerd to be installed
