@@ -33,7 +33,7 @@
 
           - name: Add Docker repository
             apt_repository:
-                     repo: docker_apt_repository
+                     repo: "{{  docker_apt_repository  }}"
                      state: present
 
           - name: Update apt and install Docker
